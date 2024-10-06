@@ -1,0 +1,16 @@
+[
+{
+  "modid": "jesusmod",
+  "name": "Eternal Jesus",
+  "description": "A port of eternal_desires' Jesus mod to 1.8.9 Forge",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Weebify", "eternal_desires"],
+  "credits": "",
+  "logoFile": "icon.png",
+  "screenshots": [],
+  "dependencies": []
+}
+]
