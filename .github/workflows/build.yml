@@ -26,7 +26,7 @@ jobs:
         uses: actions/setup-java@v4
         with:
           java-version: ${{ matrix.java }}
-          distribution: 'oracle'
+          distribution: 'microsoft'
 
       - name: make gradle wrapper executable
         run: chmod +x ./gradlew
