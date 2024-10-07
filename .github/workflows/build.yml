@@ -26,10 +26,21 @@ jobs:
         uses: actions/setup-java@v2
         with:
           java-version: ${{ matrix.java }}
-          distribution: "temurin"
+          distribution: "microsoft"
 
       - name: make gradle wrapper executable
         run: chmod +x ./gradlew
+      
+      - name: caching dependencies
+        uses: actions/cache@v2
+        with:
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+            **/loom-cache
+          key: ${{ runner.os }}-gradle-v2-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
+          restore-keys: |
+            ${{ runner.os }}-gradle-v2-
 
       - name: build
         run: ./gradlew build
